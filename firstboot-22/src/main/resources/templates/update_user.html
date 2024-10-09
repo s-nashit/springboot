@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head></head>
+  <body>
+	<h1>NSTI, Patna</h1>
+	
+	<h3>Registration Form</h3>
+	<form method="post" action="/saveUser" th:object="${u}">
+	ID: <input type="text" th:field="*{id}" /><br/>
+		Name: <input type="text" id="name" th:field="*{name}" /><br/><br/>
+	Date of Birth: <input type="date" id="dob" th:field="*{dob}" /><br/><br/>
+	E-Mail: <input type="email" id="mail" th:field="*{mail}" /><br/><br/>
+	Phone: <input type="text" id="phone" th:field="*{phone}" /><br/><br/>
+	<input type="submit" value="update" />
+	</form>
+	</body>
+	</html>

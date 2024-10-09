@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head></head>
+  <body>
+	<h1>NSTI, Patna</h1>
+	
+	<h2>Update User</h2>
+	<form action = "/saveS" method="post" th:object="${s}">
+		ID: <input type="hidden" th:field="*{id}" /><br/><br/>
+		Name: <input type="text" id="name" th:field="*{name}" /><br/><br/>
+		Age: <input type="text" id="age" th:field="*{age}" /><br/><br/>
+		Date of Joining: <input type="hidden" id="joining"  th:field= "*{joining}" /><br/><br/>
+		Mail: <input type="hidden" id="mail" th:field="*{mail}" /><br/><br/>
+		Password: <input type="text" id="pssw" th:field="*{pssw}" /><br/><br/>
+		Phone: <input type="text" id="phone" th:field="*{phone}" /><br/><br/>
+		<input type="submit" name="update" value="update" />
+	</form>
+  </body>
+  </html>

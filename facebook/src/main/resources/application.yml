@@ -1,0 +1,26 @@
+debug: true
+server:
+  port: 8080
+  servlet:
+    context-path: /
+     
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+         facebook:
+          clientId: p4vhi1np4jpnnjb2bn.apps.googleusercontent.com
+          clientSecret: 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
+          scope:
+           - email
+           - public_profile      

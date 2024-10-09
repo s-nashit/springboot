@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head></head>
+  <body>
+	<h1>NSTI, Patna</h1>
+	<table border="1">
+	<tr>
+		<th>Reg No</th>
+		<th>Name</th>
+		<th>Mail</th>
+		<th>Age</th>
+		<th>Phone</th>
+		<th>Photo details</th>
+		<th>Image</th>
+	</tr>
+	<tr th:each="s: ${data}">
+		<td th:text="${s.id}"></td>
+		<td th:text="${s.name}"></td>
+		<td th:text="${s.mail}"></td>
+		<td th:text="${s.age}"></td>
+		<td th:text="${s.phone}"></td>
+		<td th:text="${s.photo}"></td>
+		<td>
+			<img th:src="@{/photos/{p}(p=${s.photo})}" height="100px"/>
+		</td>
+	</tr>
+	</table>
+	</body>
+	</html>

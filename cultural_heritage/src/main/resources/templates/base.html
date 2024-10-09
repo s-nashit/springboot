@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/contact.css">
+
+
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+
+	<!--owl carousel-->
+	<!-- <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css" /> -->
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<div class="container py-2">
+			<!-- Logo on the left -->
+			<a class="navbar-brand" href="#">
+				<h1 class="fs-2 text-white">Culture & Heritage</h1>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<!-- Navigation Links (Centered) -->
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link fs-5" aria-current="page" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fs-5" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fs-5" href="/cities">Culture&Heritage</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link fs-5" href="/contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fs-5" href="/feedback">Feedback</a>
+					</li>
+				</ul>
+				<!-- Language Selector and Buttons (Right Aligned) -->
+				<div class="d-flex align-items-center">
+					<!-- Language Selector -->
+					<div class="google me-2" id="google_translate_element"></div>
+					<script type="text/javascript">
+						function googleTranslateElementInit() {
+							new google.translate.TranslateElement({pageLanguage: 'hindi'}, 'google_translate_element');
+						}
+					</script>
+
+					<script type="text/javascript"
+						src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<th:block th:if="${user==null}">
+							<li class="nav-item"><a class="nav-link active" aria-current="page" href="/signin"><i
+										class="fa-solid fa-right-to-bracket"></i> LOGIN</a></li>
+							<li class="nav-item"><a class="nav-link active" aria-current="page"
+									href="/register">REGISTER</a></li>
+
+<!--							<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">ADMIN</a></li>
+-->						</th:block>
+
+						<th:block th:if="${user!=null}">
+							
+							<li class="nav-item"><a class="nav-link active" aria-current="page" href="/logout">							<i
+																	class="fa-solid fa-user"></i> [[${user.name}]]</a></li>
+							<li class="nav-item"><a class="nav-link active" aria-current="page" href="/logout"><i
+										class="fa-solid fa-right-to-bracket"></i> Logout</a></li>
+						</th:block>
+
+					</ul>
+
+
+
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div th:replace="${content}"></div>
+
+	<!-- Footer Start -->
+	<footer>
+		<div class="container-fluid footer bg-primary wow fadeIn" data-wow-delay=".3s">
+			<div class="container pt-5 pb-4">
+				<div class="row g-5">
+					<div class="col-lg-4 col-md-6">
+						<a href="index.html">
+							<h1 class="text-white fw-bold d-block ">Indian Culture and Heritage</span> </h1>
+						</a>
+						<p class="mt-4 text-light">Expert Services Delivered Right to Your Home, Anytime You Need</p>
+						<div class="d-flex hightech-link">
+							<a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+									class="fab fa-facebook-f text-primary"></i></a>
+							<a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+									class="fab fa-twitter text-primary"></i></a>
+							<a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+									class="fab fa-instagram text-primary"></i></a>
+							<a href="" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i
+									class="fab fa-linkedin-in text-primary"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 ">
+						<a href="#" class="h3 text-white ">Short Link</a>
+						<div class="mt-4 d-flex flex-column short-link">
+							<a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-info me-2"></i>Home</a>
+							<a href="" class="mb-2 text-white"><i
+									class="fas fa-angle-right text-info me-2"></i>Services</a>
+							<a href="" class="mb-2 text-white"><i
+									class="fas fa-angle-right text-info me-2"></i>Contact</a>
+							<a href="" class="mb-2 text-white"><i
+									class="fas fa-angle-right text-info me-2"></i>About</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<a href="#" class="h3 text-white">Contact Us</a>
+						<div class="text-white mt-4 d-flex flex-column contact-link">
+							<a href="#" class="pb-3 text-light border-bottom border-primary"><i
+									class="fas fa-map-marker-alt text-info me-2"></i> NSTI Allahabad </a>
+							<a href="#" class="py-3 text-light border-bottom border-primary"><i
+									class="fas fa-phone-alt text-info me-2"></i> +91 9752683179</a>
+
+							<a href="#" class="py-3 text-light border-bottom border-primary"><i
+									class="fas fa-envelope text-info me-2"></i> @gmail.com</a>
+						</div>
+					</div>
+				</div>
+				<hr class="text-light mt-5 mb-4">
+				<div class="row">
+					<div class="col-md-6 text-center text-md-start">
+						<span class="text-light"><a href="#" class="text-info"><i
+									class="fas fa-copyright text-info me-2"></i>Indian Culture and Heritage</a>, All
+							right reserved.</span>
+					</div>
+					<div class="col-md-6 text-center text-md-end">
+						<!--/*** This template is free as long as you keep the footer authorâs credit link/attribution link/backlink. If you'd like to use the template without the footer authorâs credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+						<span class="text-light">Designed By<a href="#" class="text-info"> Pushpanjali Chaurasiya</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer End -->
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 150,
+			duration: 1000,
+		});
+	</script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		addEventListener('scroll', function () {
+			var header = document.querySelector('header');
+			header.classList.toggle('sticky', scrollY > 0);
+		});
+
+		function toggleMenu() {
+			var menuToggle = document.querySelector('.toggle');
+			var menu = document.querySelector('.menu');
+			menuToggle.classList.toggle('active');
+			menu.classList.toggle('active');
+		}
+	</script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/extrenaljq.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

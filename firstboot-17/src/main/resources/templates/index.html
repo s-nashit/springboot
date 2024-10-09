@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head></head>
+    
+  <body>
+  
+    <h3 style="text-align:center">Welcome to Patna NSTI!!!</h3>
+	<a href="/register">Register User</a>
+	<br/><br/><br/>
+	<div style="display:flex; justify-content: center;">
+		
+		
+		
+	
+	
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Date of Birth</th>
+			<th>E-Mail</th>
+			<th>City</th>
+			<th>Password</th>
+			<th>Operations</th>
+		</tr>
+		<tr th:each="u : ${listUsers}">
+			<td th:text="${u.id}"></td>
+			<td th:text="${u.name}"></td>
+			<td th:text="${u.dob}"></td>
+			<td th:text="${u.mail}"></td>
+			<td th:text="${u.city}"></td>
+			<td th:text="${u.passw}"></td>
+			<td>
+				<a th:href="@{'/showUpdate/'+${u.id}}">Update</a> |
+				<a th:href="@{/deleteUser/{id}(id=${u.id})}">Delete</a>
+			</td>
+
+
+		</tr>
+	</table>
+	</div>
+	
+  
+  </body>
+
+</html>

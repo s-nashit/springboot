@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+	<h1> Data</h1>
+	
+	<table border="1px">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Mail</th>
+			<th>City</th>
+			<th>Photo Name</th>
+			<th>Image</th>
+		</tr>
+		
+		<tr th:each="s: ${data}">
+			<td th:text="${s.id}"></td>
+			<td th:text="${s.name}"></td>
+			<td th:text="${s.mail}"></td>
+			<td th:text="${s.city}"></td>
+			<td th:text="${s.photoname}"></td>
+			<td>
+				<img th:src="@{/photos/{photoname}(photoname=${s.photoname})}" width="100px" />
+			</td>
+		</tr>
+	</table>
+	</body>
+	</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+	<h1>Mongo Data</h1>
+	<a href="/add">Register Here</a>
+	
+	<table border="1px">
+		<tr>
+			<th>ID</th>
+			<th>name</th>
+			<th>mail</th>
+			<th>dob</th>
+			<th>Image Name</th>
+		</tr>
+		<tr th:each="u: ${user}">
+			<td th:text="${u.id}"></td>
+			<td th:text="${u.name}"></td>
+			<td th:text="${u.mail}"></td>
+			<td th:text="${u.dob}"></td>
+			<td th:text="${u.dob}"></td>
+			
+			
+		</tr>
+	</table>
+</body>
+</html>

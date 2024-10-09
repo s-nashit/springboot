@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Users List</title>
+</head>
+<body>
+<h2>Users List</h2>
+<a href="/showNewUserForm">Add New User</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="user : ${listUsers}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${#dates.format(user.dob, 'yyyy-MM-dd')}"></td>
+        <td>
+            <a th:href="@{/showFormForUpdate/{id}(id=${user.id})}">Update</a>
+            <a th:href="@{/deleteUser/{id}(id=${user.id})}">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

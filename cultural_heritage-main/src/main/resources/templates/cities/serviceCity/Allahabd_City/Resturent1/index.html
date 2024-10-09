@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Lover</title>
+
+    <!-- **** Bootstrap CSS *** -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- **** Fontawesoome CSS *** -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- **** Custom CSS *** -->
+
+    <link rel="stylesheet" href="/restaurant/css/style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+       
+                <header class="hero flex items-center">
+                    <div class="container">
+                        <div class="welcome flex items-center">
+                            <span>Welcome to</span>
+                        </div>
+                        <h1>The World Best <span>Food</span> Website</h1>
+                        <p><b>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy.</b></p>
+                        <div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="/restaurant/images/m1.png" alt=""> 
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <section id="about2">
+        <div class="food-type wrapper">
+            <div class="container ">
+                <div class="row aligns-item-center">
+                    <div class="col-lg-5 col-md-12 text-sec mb-lg-0 mb-5">
+                        <h2>We make <span>everything by hand</span> with the best possible ingredients.</h2>
+                        <p class="drop-in-2">A restaurant is a business that prepares and serves food and drinks to
+                            customers.Meals are generally served and eaten on the premises, but many restaurants also
+                            offer take-out and food delivery services.
+                            <br>
+                            Restaurants vary greatly in appearance and offerings, including a wide variety of cuisines
+                            and service models ranging from inexpensive fast-food restaurants and cafeterias to
+                            mid-priced family restaurants, to high-priced luxury establishments.
+                        </p>
+                        <ul class="list-unstyled py-3">
+                            <li>Tasty Food</li>
+                            <li>Good Service</li>
+                            <li>Reasonable Cost</li>
+                            <li>Hygiene and Cleanliness</li>
+                        </ul>
+                        <button class="main mt-4">Learn More</button>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="card border-0">
+                            <img src="/restaurant/images/about.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="explore-food">
+        <div class="explore-food wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-content text-center">
+                            <h2>Explore Our <span>Foods</span></h2>
+                            <p class="drop-in-2">Food is often the reason why people travel! After all, there is no
+                                better way to appreciate a culture than by sampling local flavours. It could be in fancy
+                                Michelin-starred restaurants, humble hole-in-the-wall eateries or cheap food carts on
+                                the street.</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="row pt-5">
+                    <!-- Food Item 1 -->
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/1.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Kachori Sabzi Netram Mulchand</h4>
+                                <span>&#8377;80</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Kachori Sabzi', 80, './images/1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/2.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Lassi at Raja Ram Lassi</h4>
+                                <span>&#8377;50</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Lassi', 50,  'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/3.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Chaat at Nirala</h4>
+                                <span>&#8377;50</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Chaat at Nirala', 50, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/4.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Gulab Jamuns at Hira Halwai</h4>
+                                <span>&#8377;20</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Gulab Jamuns', 150, 180, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row pt-5">
+                    <!-- Food Item 1 -->
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/5.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Chhole Samose at Sainik</h4>
+                                <span>&#8377;40</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Chhole Samose ', 150, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/6.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Tandoori Chai</h4>
+                                <span>&#8377;40</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Tandoori Chai', 150, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/7.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4> Dahi-Jalebi at Hira Halwai</h4>
+                                <span>&#8377;60 </span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Dahi-Jalebi', 150, 'assets/images/1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/8.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4> Dosa at Jaiswal Dosa Corner</h4>
+                                <span>&#8377;150</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Dosa', 150, 180, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <!-- Food Item 1 -->
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/9.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>The Biryani at Eat on</h4>
+                                <span>&#8377;200</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Biryani', 200, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/10.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Masala Churmura </h4>
+                                <span>&#8377;20</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Masala Churmura', 20, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/11.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Dahi Bhalla at Kamdhenu</h4>
+                                <span>&#8377;100 </span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal(' Dahi Bhalla at Kamdhenu', 100, 'assets/images/1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="/restaurant/images/12.jpg" class="img-fluid" alt="Chole Bhature">
+                            <div class="pt-5">
+                                <h4>Litti Chokha</h4>
+                                <span>&#8377;50</span>
+                                <button class="mt-4 main " data-bs-toggle="modal" data-bs-target="#orderModal" onclick="showModal('Litti Chokha', 150, 'assets/images/chole1.jpg')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Modal Image -->
+                        <div class="col-md-6">
+                            <img id="modalImage" src="" class="img-fluid" alt="Food Image">
+                        </div>
+                        <!-- Modal Content -->
+                        <div class="col-md-6">
+                            <h4 id="modalTitle"></h4>
+                            <p>Price: <span id="modalPrice"></span> <del id="modalDiscount"></del></p>
+
+                            <div class="form-group">
+                                <label for="address">Name</label>
+                                <input type="text" class="form-control" id="address" placeholder="Enter your Name"><br>
+                                <label for="address">Delivery Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="Enter your address"><br><hr>
+                            </div>
+                            <p>Time: 15 - 20 Minutes <button class="btn btn-success" id="modalTime">4.3 &#9733;</button></p>
+
+                            <button class="mt-4 main " >Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- **** Bootstrap JS **** -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // JavaScript function to handle modal data population
+        function showModal(title, price, discount, imageUrl) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalTime').innerText = time;
+            document.getElementById('modalPrice').innerText = '₹' + price;
+            document.getElementById('modalDiscount').innerText = '₹' + discount;
+            document.getElementById('modalImage').src = imageUrl;
+        }
+    </script>
+
+
+    <!-- **** Javascript **** -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="/restaurant/assets/js/main.js"></script>
+
+</body>
+
+</html>

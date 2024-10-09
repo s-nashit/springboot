@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Register Page</title>
+</head>
+
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 mx-auto p-2">
+					<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-header text-center">
+							<h1 class="text-center mt-2 text-dark">Register</h1>
+
+						<!--	 Success message 
+							<th:block th:if="${session.succMsg}">
+								<div class="alert alert-success" role="alert">
+									[[${session.succMsg}]]
+								</div>
+								 Corrected service name 
+								<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+
+							</th:block>
+
+							 Error message 
+							<th:block th:if="${session.errorMsg}">
+								<div class="alert alert-danger" role="alert">
+									[[${session.errorMsg}]]
+								</div>
+								 Corrected service name 
+								<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+
+							</th:block>-->
+						</div>
+
+						<div class="card-body">
+							<form action="/saveUser" enctype="multipart/form-data" method="post">
+
+								<div class="mb-3 mt-1">
+									<label class="form-label mt-5">Full Name</label>
+									<input required class="form-control" name="name" type="text">
+								</div>
+
+								
+								<div class="mb-3 mt-1">
+									<label class="form-label mt-5">Mobile Number</label>
+									<input required class="form-control" name="mobileNumber" type="number">
+								</div>
+
+								<div class="mb-3 mt-1">
+									<label class="form-label">Email</label>
+									<input required class="form-control" name="email" type="email">
+								</div>
+
+								<div class="mb-3 mt-1">
+									<label class="form-label">Address</label>
+									<input required class="form-control" name="address" type="text">
+								</div>
+
+
+								<div class="mb-3 mt-1">
+								<label class="form-label">Password</label>
+								<input required class="form-control" name="password" type="password">
+								</div>
+								<div class="mb-3 mt-1">								
+								<label class="form-label">Confirm Password</label>
+								<input required class="form-control" name="cpassword" type="password">
+								</div>
+								<div class="mb-3 mt-1">
+									<label class="form-label">Profile Image</label>
+									<input class="form-control" name="img" type="file">
+								</div>
+
+								<button type="submit" class="btn bg-success text-white col-md-12">Register</button>
+							</form>
+						</div>
+
+						<div class="card-footer text-center">
+							Already have an account? <a href="/signin" class="text-decoration-none">Login</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

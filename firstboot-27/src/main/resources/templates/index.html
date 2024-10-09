@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head></head>
+  <body>
+	<h1>NSTI, Patna</h1>
+	
+	<a href="/show">Show Records</a>
+	
+	<h3>Registration Form</h3>
+	<form method="post" action="/upload" enctype="multipart/form-data">
+	Registration Number: <input type="number" name="id" /><br/><br/>
+	Name: <input type="text" name="name" /><br/><br/>
+	Age: <input type="text" name="age" /><br/><br/>
+	E-Mail: <input type="email" name="mail" /><br/><br/>
+	Phone: <input type="text" name="phone" /><br/><br/>
+	Image: <input type="file" name="photo" /><br/><br/>
+	<input type="submit" value="register" />
+	</form>
+	</body>
+	</html>

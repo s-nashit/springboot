@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<htm xmlns:th="http://www.thymeleaf.org">
+
+  <head></head>
+  <body>
+	<h3>Welcome to NSTI, Patna!!!</h3>
+	
+	
+	<form action="/saveUser" method="post" th:object="${user}">
+		ID: <input type="text" th:field="*{id}" />
+		Name: <input type="text" th:field="*{name}" id="name" /><br/><br/>
+		DoB: <input type="date" th:field="*{dob}" id="dob" /><br/><br/>
+		E-Mail: <input type="text" id="mail" th:field="*{mail}" /><br/><br/>
+		Password: <input type="text" id="passw" th:field="*{passw}" /><br/><br/>
+		<input type="submit" name="submit" value="update" />
+		
+	</form>
+  </body>
+  </html>

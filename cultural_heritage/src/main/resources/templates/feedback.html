@@ -1,0 +1,58 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+    <title>Feedback Page</title>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Elegant Feedback Form, Responsive Web Template, Bootstrap, Flat Web Templates, Android Compatible, Free Web Designs" />
+
+    <!-- External CSS -->
+    <link href="css/feedback.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+</head>
+
+<body class="agileits_w3layouts">
+    <section>
+        <h1 class="agile_head text-center">Feedback Form</h1>
+        <div class="w3layouts_main wrap">
+            <h3>Please help us to serve you better by taking a couple of minutes.</h3>
+            <form action="feedback.php" method="post" class="agile_form">
+                <h2>How satisfied were you with our service?</h2>
+                <ul class="agile_info_select">
+                    <li>
+                        <input type="radio" name="view" value="excellent" id="excellent" required>
+                        <label for="excellent">Excellent</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="view" value="good" id="good">
+                        <label for="good">Good</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="view" value="neutral" id="neutral">
+                        <label for="neutral">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="view" value="poor" id="poor">
+                        <label for="poor">Poor</label>
+                    </li>
+                </ul>
+
+                <h2>If you have specific feedback, please write to us...</h2>
+                <textarea placeholder="Additional comments" class="w3l_summary" name="comments" required></textarea>
+                <input type="text" placeholder="Your Name (optional)" name="name" />
+                <input type="email" placeholder="Your Email (optional)" name="email" />
+                <input type="text" placeholder="Your Number (optional)" name="num" />
+                <input type="text" placeholder="Your Address (optional)" name="address" />
+
+                <center><input type="submit" value="Submit Feedback" class="agileinfo" /></center>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+

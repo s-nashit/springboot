@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head></head>
+  <body>
+	<h1>NSTI, Patna</h1>
+	
+	<a href="/register">Register New User</a>
+	<br/><hr/>
+	
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Date of Birth</th>
+			<th>Mail</th>
+			<th>Phone</th>
+			<th>Actions</th>
+		</tr>
+		<tr th:each="u: ${data}">
+			<td th:text="${u.id}"></td>
+			<td th:text="${u.name}"></td>
+			<td th:text="${u.dob}"></td>
+			<td th:text="${u.mail}"></td>
+			<td th:text="${u.phone}"></td>
+			<td> 
+				<a th:href="@{/update/{id}(id=${u.id})}">update</a> | 
+				<a th:href="@{/delete/{id}(id=${u.id})}">delete</a>
+			</td>
+		</tr>
+	</table>
+	</body>
+	</html>

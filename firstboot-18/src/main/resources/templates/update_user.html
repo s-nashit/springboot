@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>  </head>
+  <body>
+	<h2>Edit User</h2>
+	<form method="post" action="/saveUser" th:object="${data}">
+		ID : <input type="hidden" th:field="*{id}" /><br/><br/>
+		Name : <input type="text" th:field="*{name}" id="name" /><br/><br/>
+		DoB : <input type="date" th:field="*{dob}" id="dob" /><br/><br/>
+		Mail : <input type="hidden" th:field="*{mail}" id="mail" /><br/><br/>
+		Password : <input type="text" th:field="*{passw}" id="passw" /><br/><br/>
+		<input type="submit" value="update" />
+	</form>
+	
+  </body>
+  </html>

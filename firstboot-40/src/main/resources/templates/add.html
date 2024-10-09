@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+	<h1>Add User</h1>
+	<form th:action="@{/saveUser}" method="post" enctype="multipart/form-data">
+		ID : <input type="text" name="id" /><br/><br/>
+		Name : <input type="text" name="name" /><br/><br/>
+		Mail : <input type="text" name="mail" /><br/><br/>
+		Date of Birth : <input type="text" name="dob" /><br/><br/>
+		Image: <input type="file" name="file" /><br/><br/>
+		<input type="submit" value="register" />
+	</form>
+</body>
+</html>
